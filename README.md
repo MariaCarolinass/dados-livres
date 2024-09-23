@@ -1,85 +1,171 @@
 # Projeto continuado no GitLab: https://gitlab.com/dados-livres/dados-livres/
 
-## Dados Livres - Plataforma de Dados Abertos
+## Dados Livres - Plataforma livre de dados abertos
 
-**Plataforma Dados Livres permite o compartilhamento e a colaboração na
-identificação de fontes de dados abertos e aplicações que fazem uso dessas
-informações.**
+O **Dados Livres** é uma plataforma livre, sem fins lucrativos, para catalogação de fontes de dados abertos e aplicações cívicas por meio de colaboração coletiva. Um dos objetivos do projeto é criar um ambiente que facilite a atuação do público no controle social e na difusão dos dados abertos para os mais diversos fins.
 
-A iniciativa de desenvolver Dados Livres surgiu inicialmente como um projeto
-de pesquisa em uma instituição acadêmica do RN, no ano de 2019, quando um aluno
-e uma aluna mostraram interesse de contribuir com projetos que fossem software
-livre e o Prof. Mr. Pedro Baesse apresentou a ideia de desenvolver a plataforma.
+A ideia de desenvolver a plataforma Dados Livres surgiu em 2018, como um projeto de pesquisa no Instituto Federal de Ciência e Tecnologia do Rio Grande do Norte (IFRN). Mantido e fundado pela [Carolina Soares](https://gitlab.com/mariacarolinass) e por [Pedro Baesse](https://gitlab.com/pbaesse). O Dados Livres é disponibilizado como software livre, sob a [licença GNU GPLv3](https://gitlab.com/dados-livres/dados-livres/-/blob/master/LICENSE) e o seu código-fonte disponível aqui no [GitLab](https://gitlab.com/dados-livres/dados-livres/).
 
-Alguns diferenciais de Dados Livres é a praticidade, pois suas fontes e
-aplicações podem ser facilmente cadastradas por qualquer usuário inscrito na
-plataforma, sem exigir nenhum conhecimento de código, dessa forma, facilitando
-encontrar vários possíveis colaboradores. Além disso, suas bases de dados podem
-ser ligadas às aplicações criadas e vice-versa.
+Alguns diferenciais do Dados Livres é a praticidade, pois suas fontes de dados abertos e aplicações cívicas são facilmente cadastradas na plataforma sem exigir nenhum conhecimento de código dos seus usuários. Outro diferencial é a ligação de fontes de dados abertos com as aplicações cívicas na sua página de perfil e vice-versa. Entre os planejamentos futuros do projeto é pretenso permitir cadastrar artigos científicos e notícias que utilizam de dados abertos.
 
-A disponibilidade dessas informações abertas direcionadas a sociedade civil gera
-benefícios como: controle social, transparência pública, democracia, inovação
-cívica, combate à corrupção e vários outros.
+A plataforma foi desenvolvida com a linguagem de programação Python juntamente ao Microframework Web Flask. Além disso, o projeto utiliza as tecnologias web HTML, CSS, JavaScript e o framework Bootstrap. [Saiba mais sobre o Dados Livres aqui!](https://dadoslivres.org/about)
 
-## Problemas conhecidos e possíveis melhorias
+**Visite o nosso site: [dadoslivres.org](https://dadoslivres.org/)**
+
+## Sumário
+
+* [Como contribuir](#como-contribuir)
+* [Como instalar](#como-instalar)
+    * [Linux](#linux)
+    * [Mac](#mac)
+    * [Windows](#windows)
+    * [Bibliotecas do projeto](#bibliotecas-do-projeto)
+    * [Configurando o projeto](#configurando-o-projeto)
+    * [Rodando o projeto](#rodando-o-projeto)
+* [Lista de autores](#lista-de-autores)
+* [Licença](#licença)
+* [Contato](#contato)
+* [Redes sociais](#redes-sociais)
+
+## Como contribuir
+
+1. **Cadastro de fontes e aplicações**
+
+    Contribuia com o Dados Livres ajudando no cadastro de fontes de dados abertos ou aplicações cívicas. Primeiro é necessário ter um [cadastro de usuário](https://dadoslivers.org/auth/register_request) na plataforma, ou caso já tenha um cadastro, realizar o [login](https://dadoslivres.org/auth/login). Logo, preencher o forumário de cadastro da [fonte](https://dadoslivres.org/register_source) ou [aplicação](https://dadoslivres.org/register_software) que deseja cadastrar no Dados Livres.
+    
+2. **Código-fonte**
+
+    Novas funcionalidades, melhorias ou ideias de issues devem ser feitas aqui no [repositório do Dados Livres](https://gitlab.com/dados-livres/dados-livres). Confira o tópico de [como instalar](#como-instalar) o projeto!
+
+    **Utilize o Git para contribuir com o código:**
+
+    Crie uma nova branch para a funcionalidade que irá desenvolver:
+
+    ```sh
+    git checkout -b "nome_da_branch"
+    ```
+
+    Adicione todos os arquivos criados ou editados:
+
+    ```sh
+    git add nome_do_arquivo
+    ```
+
+    Salve os arquivos:
+
+    ```sh
+    git commit -m "descreva o que editou ou criou"
+    ```
+
+    Suba todas as alterações para o GitLab:
+
+    ```sh
+    git push --set-upstream origin nome_da_branch
+    ```
+
+3. **Saiba mais sobre como contribuir**
+
+    - [Página de como contribuir na plataforma](https://dadoslivres.org/how_to_contribute)
+    - [Ideias de contribuição no quadro de tópicos (issues)](https://gitlab.com/dados-livres/dados-livres/-/boards)
 
 ## Como instalar
 
-Faça um fork do projeto Dados Livres e em seguida clone o repositório forkado
-por você:
+Pré-requisitos:
+
+- [Git](https://git-scm.com/downloads)
+- [Python3](https://www.python.org/downloads/)
+- [Pip](https://pip.pypa.io/en/stable/installation/)
+
+Primeiro faça um fork do projeto! Em seguida clone o repositório que você fez o fork:
 
 ```sh
-$ git clone https://gitlab.com/pbaesse/dados-livres.git
-$ cd dados-livres       (entre na pasta clonada)
+git clone https://gitlab.com/seu-usuario/dados-livres
 ```
 
-Use um ambiente virtual para fazer as instalações utilizadas na aplicação -
-
-Para criar o ambiente virtual com o [venv](https://docs.python.org/pt-br/dev/library/venv.html):
+Para entrar no repositório:
 
 ```sh
-$ python3 -m venv venv
+cd dados-livres
 ```
 
-Para ativar o ambiente virtual:
+### Linux:
+
+Crie o ambiente virtual venv:
 
 ```sh
-$ source venv/bin/activate       (Linux)
-$ source venv\Script\activate    (Windows)
+python3 -m venv venv
 ```
 
-E finalmente, instale as dependencias da aplicação:
+Se a sua distribuição Linux for derivada de Debian/Ubuntu e caso peça para instalar o **python3-venv** rode o comando `sudo apt-get install python3-venv` e depois repita `python3 -m venv venv`.
+
+Entre no ambiente virtual:
 
 ```sh
-$ pip install -r requirements.txt
+source venv/bin/activate
+```
+
+### Mac:
+
+Instale o virtualenv:
+
+```sh
+pip install virtualenv
+```
+
+Crie o ambiente virtual venv:
+
+```sh
+python3 -m venv venv
+```
+
+Entre no ambiente virtual:
+
+```sh
+source venv/bin/activate
+```
+
+### Windows:
+
+Instale o virtualenv:
+
+```sh
+pip install virtualenv
+```
+
+Crie o ambiente virtual venv:
+
+```sh
+python3 -m venv venv
+```
+
+Entre no ambiente virtual:
+
+```sh
+venv\Scripts\activate
+```
+
+### Bibliotecas do projeto 
+
+Agora, instale todas as dependências do projeto salvas no arquivo requirements.txt:
+
+```sh
+pip install -r requirements.txt
 ```
 
 ### Configurando o projeto
 
-Copie o arquivo .env-example e renomei para .env.
-
-Defina o valor para a variável `SECRET_KEY` nesse arquivo.
-
-Se necessário, pode utilizar os comandos abaixo para gerar um valor para `SECRET_KEY`  
+Configure o banco de dados local:
 
 ```sh
-$ python
->>> import uuid
->>> uuid.uuid4().hex
+flask db upgrade
 ```
 
-Criando o banco de dados:
-
-```sh
-$ flask db stamp head
-$ flask db migrate -m "criei o banco de dados"
-$ flask db upgrade
-```
+### Rodando o projeto
 
 Para rodar a aplicação utilize o comando:
 
 ```sh
-$ flask run
+flask run
 ```
 
 Acesse no seu navegador o seguinte endereço abaixo:
@@ -90,16 +176,28 @@ http://localhost:5000/
 
 ## Lista de autores
 
-- Carolina Soares ([@mariacarolinass](https://gitlab.com/mariacarolinass))
+- [Carolina Soares](https://mariacarolinass.github.io/carolinasoares/)
+- [Pedro Baesse](https://www.pbaesse.net/)
 
 ## Licença
 
-Dados Livres é Licenciado sob Licença GPL-3.0.
+O Dados Livres é Licenciado sob [Licença GPL-3.0](https://gitlab.com/dados-livres/dados-livres/-/blob/master/LICENSE).
 
 ## Contato
 
-E-mail para contato: pbaesse@gmail.com
+Dados Livres:
 
-Outros meios de contato:
+- Comunidade no Telegram: [@dadoslivres](https://t.me/dadoslivres)
 
-- Telegram: [carolsoaresm](https://t.me/carolsoaresm) ou [pbaesse](https://t.me/pbaesse)
+Mantedores do projeto:
+
+- Telegram: [@carolsoaresm](https://t.me/carolsoaresm) | mcarolinasoares0@gmail.com
+- Telegram: [@pbaesse](https://t.me/pbaesse) | pbaesse@gmail.com
+
+## Redes sociais
+
+- [LinkedIn](https://www.linkedin.com/company/dados-livres/)
+- [YouTube](https://www.youtube.com/channel/UCo1LRnYUpCXejZAckGvWmGA)
+- [Instagram](https://www.instagram.com/dadoslivres/)
+- [Twitter](https://twitter.com/dadoslivres)
+- [Facebook](https://www.facebook.com/dadoslivres)
