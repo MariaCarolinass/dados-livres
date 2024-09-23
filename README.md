@@ -1,4 +1,6 @@
-# Dados Livres - Plataforma de Dados Abertos
+# Projeto continuado no GitLab: https://gitlab.com/dados-livres/dados-livres/
+
+## Dados Livres - Plataforma de Dados Abertos
 
 **Plataforma Dados Livres permite o compartilhamento e a colaboração na
 identificação de fontes de dados abertos e aplicações que fazem uso dessas
@@ -19,9 +21,9 @@ A disponibilidade dessas informações abertas direcionadas a sociedade civil ge
 benefícios como: controle social, transparência pública, democracia, inovação
 cívica, combate à corrupção e vários outros.
 
-# Problemas conhecidos e possíveis melhorias
+## Problemas conhecidos e possíveis melhorias
 
-# Como instalar
+## Como instalar
 
 Faça um fork do projeto Dados Livres e em seguida clone o repositório forkado
 por você:
@@ -52,7 +54,7 @@ E finalmente, instale as dependencias da aplicação:
 $ pip install -r requirements.txt
 ```
 
-## Configurando o projeto
+### Configurando o projeto
 
 Copie o arquivo .env-example e renomei para .env.
 
@@ -86,18 +88,18 @@ Acesse no seu navegador o seguinte endereço abaixo:
 http://localhost:5000/
 ```
 
-# Lista de autores
+## Lista de autores
 
 - Carolina Soares ([@mariacarolinass](https://gitlab.com/mariacarolinass))
 
-# Licença
+## Licença
 
 Dados Livres é Licenciado sob Licença GPL-3.0.
 
-# Contato
+## Contato
 
 E-mail para contato: pbaesse@gmail.com
 
 Outros meios de contato:
 
-- Telegram: [carols0](https://t.me/carols0) ou [pbaesse](https://t.me/pbaesse)
+- Telegram: [carolsoaresm](https://t.me/carolsoaresm) ou [pbaesse](https://t.me/pbaesse)
